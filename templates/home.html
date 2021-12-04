@@ -1,47 +1,84 @@
 {% load static %}
 {% block content %}
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/card.css' %}">
+    <link rel="stylesheet" href="{% static '/css/wrapper.css' %}">
+    <link rel="stylesheet" href="{% static '/css/forms.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
+</head>
+<body class="">
+    <!--nav start-->
+      <nav class="navbar-1">
+        <div class="container-fluid">
+          <a class="brand d-flex justify-content-center" href="#">
+            Angle
+          </a>
+        </div>
+      </nav>
+    <!--nav end-->
 
-<!-- ========================= SECTION MAIN ========================= -->
-<section class="section-intro padding-y-sm">
-    <div class="container">
-    
-    <div class="intro-banner-wrap">
-        <img src="{% static 'images/banners/1.jpg' %}" class="img-fluid rounded">
-    </div>
-    
-    </div> <!-- container //  -->
-    </section>
-    <!-- ========================= SECTION MAIN END// ========================= -->
-    
-    <!-- ========================= SECTION  ========================= -->
-    <section class="section-name padding-y-sm">
-    <div class="container">
-    
-    <header class="section-heading">
-        <a href="./store.html" class="btn btn-outline-primary float-right">See all</a>
-        <h3 class="section-title">Popular products</h3>
-    </header><!-- sect-heading -->
-    
-        
-    <div class="row">
-        {% for product in products %}
-        <div class="col-md-3">
-            <div class="card card-product-grid">
-                <a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
-                <figcaption class="info-wrap">
-                    <a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
-                    <div class="price mt-1">$ {{ product.price }}</div> <!-- price-wrap.// -->
-                </figcaption>
+    <!--content dp start-->
+      <div class="content">
+        <div class="sc">
+          <div class="wraper">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+          <div class="container">
+            <div class="d-flex justify-content-center head ">
+              Hello world !
             </div>
-        </div> <!-- col.// -->
-        {% endfor %}
-        
-    </div> <!-- row.// -->
-    
-    </div><!-- container // -->
-    </section>
-    <!-- ========================= SECTION  END// ========================= -->
+          </div>
+        </div>
+      </div>
+    <!--content dp end-->
+      
+    <!--bottom navbar start-->
+    <div class="navbar-2 d-flex justify-content-center">
+        <div class="row  ">
+          <div class="col d-flex justify-content-center">
+            <div class="icon">        
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity icon-logo d-flex jus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--bottom navbar end-->
+
+      <script src="js/js.js"></script>
+      <script src="js/new.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
     
 {% endblock %}
 
