@@ -1,1 +1,1 @@
-web: gunicorn greatekart.wsgi
+web: gunicorn angle.wsgi
